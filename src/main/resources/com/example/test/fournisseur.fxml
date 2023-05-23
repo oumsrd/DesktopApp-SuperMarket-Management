@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="pane_fornisseurs" onMouseClicked="#onTableItemSelect" prefHeight="489.0" prefWidth="654.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.test.Fournisseur">
+   <children>
+      <TextField fx:id="phonetextfield" layoutX="329.0" layoutY="136.0" />
+      <Text fill="#582900" layoutX="262.0" layoutY="148.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Phone">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </Text>
+      <Text fill="#582900" layoutX="26.0" layoutY="141.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ville">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </Text>
+      <TextField fx:id="citytextfield" layoutX="72.0" layoutY="124.0" />
+      <Text fill="#582900" layoutX="258.0" layoutY="92.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Adresse">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </Text>
+      <TextField fx:id="adressetextfield" layoutX="329.0" layoutY="75.0" />
+      <Text fill="#582900" layoutX="30.0" layoutY="93.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Id" wrappingWidth="19.58270263671875">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </Text>
+      <TextField fx:id="idtextfield" layoutX="72.0" layoutY="75.0" />
+      <Text fill="#582900" layoutX="26.0" layoutY="183.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nom">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </Text>
+      <TextField fx:id="nametextfield" layoutX="72.0" layoutY="170.0" />
+      <TableView fx:id="tablefournisseur" layoutX="31.0" layoutY="279.0" onKeyPressed="#onTableItemSelect" onMouseClicked="#onTableItemSelect" onSort="#showsFournisseur" prefHeight="200.0" prefWidth="379.0">
+        <columns>
+          <TableColumn fx:id="id_col" prefWidth="75.0" text="id" />
+            <TableColumn fx:id="nom_col" prefWidth="75.0" text="nom" />
+          <TableColumn fx:id="adresse_col" prefWidth="75.0" text="adresse" />
+            <TableColumn fx:id="tel_col" prefWidth="75.0" text="phone" />
+            <TableColumn fx:id="ville_col" prefWidth="75.0" text="ville" />
+        </columns>
+      </TableView>
+      <Button fx:id="ajouterbutton" layoutX="34.0" layoutY="212.0" mnemonicParsing="false" onAction="#AjouterButtonAction" style="-fx-background-color: #582900;" text="ajouter" textFill="WHITE" />
+      <Button fx:id="clearButton" layoutX="191.0" layoutY="212.0" mnemonicParsing="false" onAction="#ClearTextField" style="-fx-background-color: #582900;" text="vider" textFill="WHITE" />
+      <Button fx:id="modifierbutton" layoutX="343.0" layoutY="212.0" mnemonicParsing="false" onAction="#ModifierButtonAction" style="-fx-background-color: #582900;" text="modifier" textFill="WHITE" />
+      <Button fx:id="supprimerbutton" layoutX="533.0" layoutY="212.0" mnemonicParsing="false" onAction="#SupprimerButtonAction" style="-fx-background-color: #582900;" text="supprimer" textFill="WHITE" />
+      <Text fill="#582900" layoutX="418.0" layoutY="323.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Recherche:">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </Text>
+      <TextField fx:id="filterField" layoutX="493.0" layoutY="306.0" />
+      <AnchorPane layoutX="498.0" layoutY="12.0" prefHeight="105.0" prefWidth="149.0">
+         <children>
+            <AnchorPane layoutX="8.0" layoutY="3.0" prefHeight="121.0" prefWidth="134.0" style="-fx-background-color: #582900;">
+               <children>
+                  <ImageView fitHeight="106.0" fitWidth="110.0" layoutX="14.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@logo.jpg" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <Text fill="#582900" layoutX="72.0" layoutY="47.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Gestion des Fournisseurs">
+         <font>
+            <Font name="System Bold" size="32.0" />
+         </font>
+      </Text>
+      <Button fx:id="Retourbutton" layoutX="458.0" layoutY="421.0" mnemonicParsing="false" onAction="#Retourfournisseur" prefHeight="33.0" prefWidth="79.0" style="-fx-background-color: #582900;" text="Retour" textFill="#ebdeaa" />
+   </children>
+</AnchorPane>

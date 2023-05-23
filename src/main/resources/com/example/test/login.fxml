@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.test.loginController">
+   <right>
+        <AnchorPane prefHeight="600.0" prefWidth="600.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER">
+            <ImageView fx:id="LoginImageView" fitHeight="93.0" fitWidth="71.0" layoutX="414.0" layoutY="57.0" pickOnBounds="true" preserveRatio="true">
+                <Image url="@login.png" />
+            </ImageView>
+            <Label layoutX="294.0" layoutY="186.0" prefHeight="8.0" prefWidth="85.0" text="ADMIN">
+                <font>
+                    <Font size="18.0" />
+                </font>
+            </Label>
+            <Label layoutX="274.0" layoutY="262.0" prefHeight="27.0" prefWidth="127.0" text="MOT DE PASSE">
+                <font>
+                    <Font size="18.0" />
+                </font>
+            </Label>
+            <TextField fx:id="usernametextfield" layoutX="418.0" layoutY="180.0" prefHeight="38.0" prefWidth="166.0" promptText="UserName" />
+            <Button fx:id="loginbutton" layoutX="302.0" layoutY="357.0" mnemonicParsing="false" onAction="#loginButtonOnAction" prefHeight="37.0" prefWidth="264.0" style="-fx-background-color: #582900;" text="Sign In" textFill="#fcf7f7">
+                <font>
+                    <Font name="Arial Unicode MS" size="14.0" />
+                </font>
+            </Button>
+            <Button fx:id="inscrireButton" layoutX="300.0" layoutY="449.0" mnemonicParsing="false" onAction="#inscrireButtonOnAction" prefHeight="36.0" prefWidth="270.0" style="-fx-background-color: #582900;" text="Sign Up" textFill="#fcecec">
+                <font>
+                    <Font name="Arial Unicode MS" size="14.0" />
+                </font>
+            </Button>
+            <Pane prefHeight="600.0" prefWidth="270.0" style="-fx-background-color: #582900;">
+                <children>
+                    <ImageView fx:id="brandingImageView" fitHeight="184.0" fitWidth="184.0" layoutX="43.0" layoutY="109.0" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                            <Image url="@supermarkets.png" />
+                        </image>
+                    </ImageView>
+               <Text fill="#eee9e9" layoutX="77.0" layoutY="384.0" strokeType="OUTSIDE" strokeWidth="0.0" text="servier-vous est notre plaisir" textAlignment="CENTER" wrappingWidth="116.13671875">
+                  <font>
+                     <Font size="18.0" />
+                  </font>
+               </Text>
+                </children>
+            </Pane>
+            <Label alignment="BOTTOM_RIGHT" contentDisplay="CENTER" layoutX="336.0" layoutY="14.0" text="Welcome Admin" textAlignment="CENTER" textFill="#050505">
+                <font>
+                    <Font name="Arial" size="31.0" />
+                </font>
+            </Label>
+            <PasswordField fx:id="passwordtextfield" layoutX="414.0" layoutY="257.0" prefHeight="37.0" prefWidth="174.0" promptText="Password" />
+         <Label fx:id="loginMessagelabel" alignment="CENTER" layoutX="283.0" layoutY="319.0" prefHeight="27.0" prefWidth="303.0" textFill="#a80404">
+            <font>
+               <Font size="14.0" />
+            </font></Label>
+         <Label layoutX="420.0" layoutY="408.0" prefHeight="21.0" prefWidth="31.0" text="or" textFill="#0f12d1">
+            <font>
+               <Font size="15.0" />
+            </font>
+         </Label>
+         <ImageView fitHeight="26.0" fitWidth="28.0" layoutX="529.0" layoutY="186.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+               <Image url="@user.png" />
+            </image>
+         </ImageView>
+         <ImageView fitHeight="23.0" fitWidth="29.0" layoutX="531.0" layoutY="268.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+               <Image url="@lock.png" />
+            </image>
+         </ImageView>
+        </AnchorPane>
+   </right>
+</BorderPane>
